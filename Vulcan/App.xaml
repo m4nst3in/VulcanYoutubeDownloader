@@ -3,12 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Vulcan"
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:ui2="http://schemas.inkore.net/lib/ui/wpf/modern"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ui:ThemesDictionary Theme="Dark" />
                 <ui:ControlsDictionary />
+                <ui2:ThemeResources/>
+                <ui2:XamlControlsResources/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

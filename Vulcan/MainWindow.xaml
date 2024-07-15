@@ -3,9 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Vulcan"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:ui2="http://schemas.inkore.net/lib/ui/wpf/modern"
         mc:Ignorable="d"
+        ui2:WindowHelper.UseModernWindowStyle="True"
+        ui2:WindowHelper.SystemBackdropType="Mica"
         Title="Vulcan YouTube Downloader" Height="480" Width="800"
         Icon="assets/icon.ico">
     <Grid>
@@ -15,8 +17,8 @@
         </Grid.RowDefinitions>
 
         <!-- Header -->
-        <Grid Background="#2C3E50">
-            <TextBlock Text="YouTube Downloader" FontSize="30" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe UI" Margin="241,20,0,0"/>
+        <Grid>
+            <TextBlock Text="YouTube Downloader" FontSize="24" FontWeight="Bold"  Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="264,19,0,0"/>
         </Grid>
 
         <!-- Content -->
@@ -25,8 +27,8 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="300" />
             </Grid.ColumnDefinitions>
-            <ui:TextBox Name="UrlTextBox" PlaceholderText="Type video URL..." Grid.Column="1" Margin="165,73,-318,0" Height="64" VerticalAlignment="Top" />
-            <ui:Button Name="DownloadButton" Appearance="Primary" Content="Download" Icon="Fluent24" Grid.Column="1" Margin="313,133,-133,0" VerticalAlignment="Top" HorizontalAlignment="Stretch" />
+            <ui:TextBox Name="UrlTextBox" PlaceholderText="Type video URL..." Grid.Column="1" Margin="185,73,-323,0" Height="64" VerticalAlignment="Top" />
+            <ui:Button Name="DownloadButton" Appearance="Primary" Content="Download" Icon="Fluent24" Grid.Column="1" Margin="331,128,-151,0" VerticalAlignment="Top" HorizontalAlignment="Center" />
             <ui:Image Name ="ThumbnailImage" CornerRadius="4" BorderBrush="#33000000" Height="283" Grid.Column="1" Margin="0,137,4,0" VerticalAlignment="Top" />
             <TextBlock Name="DownloadedVideoName" Grid.Column="1" Margin="318,191,-553,0" VerticalAlignment="Top" Height="25" />
             <TextBlock Name="VideoDuration" Grid.Column="1" Margin="318,221,-553,0" VerticalAlignment="Top" Height="26" />
